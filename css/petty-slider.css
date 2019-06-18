@@ -1,0 +1,65 @@
+/**
+ * @Main CSS
+ * @petty-slider
+ */
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
+}
+
+.pettySlider {
+    position: relative;
+}
+
+.pettySlider ul.carousel {
+    padding: 0;
+    margin: 0 auto;
+    margin-top: 50px;
+    position: relative;
+    width: 100%;
+    height: 450px;
+}
+
+.pettySlider ul.carousel li {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    list-style: none;
+    background: green;
+    color: #ffffff;
+    font-size: 90px;
+}
+
+.pettySlider ul.carousel li img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+    object-position: center;
+}
+
+.pettySlider ul.carousel li:not(.current) {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.pettySlider .carouselControl .prev,
+.pettySlider .carouselControl .next {
+    width: 50px;
+    height: 50px;
+    font-size: 32px;
+    color: #000000;
+    border-radius: 100%;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    z-index: 10;
+    transform: translateY(-50%);
+}
+
+.pettySlider .carouselControl .next {
+    left: calc(100% - 75px) !important;
+}
